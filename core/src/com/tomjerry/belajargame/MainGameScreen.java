@@ -26,6 +26,7 @@ public class MainGameScreen extends BaseScreen {
     @Override
     public void show() {
         stage = new Stage();
+        stage.setDebugAll(true);
         aktorBola = new AktorBola(bola);
         aktorRintangan1 = new AktorRintangan1(regionRintangan1);
         stage.addActor(aktorBola);
@@ -45,7 +46,15 @@ public class MainGameScreen extends BaseScreen {
         Gdx.gl.glClearColor(0.4f , 0.5f , 0.8f , 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act();
+        tabrakan();
         stage.draw();
+    }
+
+    private void tabrakan() {
+        if (aktorBola.isAlive() && (aktorBola.getX() + aktorBola.getWidth()) > aktorRintangan1.getX()) {
+            System.out.println("Bertabrkan");
+            aktorBola.setAlive(false);
+        }
     }
 
     @Override

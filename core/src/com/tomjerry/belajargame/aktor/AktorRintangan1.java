@@ -10,11 +10,12 @@ public class AktorRintangan1 extends Actor {
 
     public AktorRintangan1(TextureRegion rintangan1) {
         this.rintangan1 = rintangan1;
+        setSize(rintangan1.getRegionWidth() , rintangan1.getRegionHeight());
     }
 
     @Override
     public void act(float delta) {
-        setX(getX() - 50 * delta);
+        setX(getX() - 100 * delta);
     }
 
     @Override
