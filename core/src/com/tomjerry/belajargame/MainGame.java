@@ -12,7 +12,7 @@ public class MainGame extends ApplicationAdapter {
 	private Texture bola , rintangan1;
 	private TextureRegion regionDuri;
 	private SpriteBatch batch;
-	private int width , height;
+//	private int width , height;
 	private int widthBola , heightBola;
 
 	@Override
@@ -27,8 +27,8 @@ public class MainGame extends ApplicationAdapter {
 
 		regionDuri = new TextureRegion(rintangan1 , 0 , 0 , 52 , 128);
 
-		width = Gdx.graphics.getWidth();
-	    height = Gdx.graphics.getHeight();
+//		width = Gdx.graphics.getWidth();
+//	    height = Gdx.graphics.getHeight();
 
 	    widthBola = bola.getWidth();
 	    heightBola = bola.getHeight();
